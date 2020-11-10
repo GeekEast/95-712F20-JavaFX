@@ -1,4 +1,4 @@
-package sample;
+package sample.lamda;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -23,13 +23,15 @@ public class HandleEvent extends Application {
 
         CancelHandlerClass handler2 = new CancelHandlerClass();
         btCancel.setOnAction(handler2);
+
+        // add ok and cancel button to the pane
         pane.getChildren().addAll(btOK, btCancel);
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane);
-        primaryStage.setTitle("HandleEvent"); // Set the stage title
-        primaryStage.setScene(scene); // Place the scene in the stage
-        primaryStage.show(); // Display the stage
+        primaryStage.setTitle("HandleEvent");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     /**
@@ -41,6 +43,7 @@ public class HandleEvent extends Application {
     }
 }
 
+// outer class
 class OKHandlerClass implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent e) {
